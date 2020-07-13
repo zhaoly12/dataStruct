@@ -33,7 +33,8 @@ seqList* initList()
 		return l;
 	}
 }
-// ???
+
+// initialize a seqList in another way
 void initList2(seqList** l)
 {
 	*l = (seqList*)malloc(sizeof(seqList));
@@ -215,6 +216,9 @@ void showList(seqList* l)
 int main() {
 	// create a seqList 
 	seqList* l = initList();
+	seqList ** l2;
+	l2 = (seqList**)malloc(sizeof(seqList*));
+	initList2(l2);
 	// check if it is empty
 	emptyList(*l); 
 	// insert 4 elements into it
