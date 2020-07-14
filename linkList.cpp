@@ -233,6 +233,78 @@ void clearList(linkList *l)
 	printf("linkList cleared!\n");
 }
 
+/*
+merge two linkList in order
+*/
+linkList mergeLists(linkList la, linkList lb)
+{
+	Node * pa = la->next, *pb = lb->next;
+	linkList l = initList();
+	l->data = 0; // the data in start point defined to be 0
+	Node *p = l;
+	char flag = '0';
+	
+	while(1)
+	{
+		if(!pb)
+		{
+			flag = 'a';
+			break;
+		}
+		if(!pa)
+		{
+			flag = 'b';
+			break;
+		}
+		Node * pt = (Node*)malloc(sizeof(Node));
+		if(pa->data <= pb->data)
+		{ 
+			pt->data = pa->data;
+			pa = pa->next;
+		} 
+		else
+		{
+			pt->data = pb->data;
+			pb = pb->next;	
+		}
+		pt->next = NULL;
+		p->next = pt; 
+		p = pt;
+	}
+	
+	// if a is longer than b
+	if(flag == 'a')
+	{
+		while(pa)
+		{
+			Node * pt = (Node*)malloc(sizeof(Node));
+			pt->data = pa->data;
+			pa = pa->next;
+			pt->next = NULL;
+			p->next = pt;
+			p = pt;
+		}	
+	}
+	// if b is longer than a
+	else if(flag == 'b')
+	{
+		while(pb)
+		{
+			Node * pt = (Node*)malloc(sizeof(Node));
+			pt->data = pb->data;
+			pb = pb->next;
+			pt->next = NULL;
+			p->next = pt;
+			p = pt;
+		}
+	} 
+	else
+	{ 
+		return l;
+	} 
+	return l;
+}
+
 //test
 int main()
 {
@@ -278,6 +350,25 @@ int main()
 	clearList(pl);
 	showList(l);
 	printf("the length of this linkList is %d\n", listLength(l));
+
+	// merge two linkLists
+	linkList la = initList();
+	linkList lb = initList();
+	la->data = 0;
+	lb->data = 0;
+	tailInsList(la, pa);
+	tailInsList(la, pb);
+	tailInsList(la, pc);
+	tailInsList(lb, pb);
+	tailInsList(lb, pc);
+	tailInsList(lb, pd);
+	linkList lab = mergeLists(la, lb);
+	printf("merge the following two linkLists:\n");
+	showList(la);
+	showList(lb);
+	puts("the result is:"); 
+	showList(lab);
+	
 
 	return 0;
 }
