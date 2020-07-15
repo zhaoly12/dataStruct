@@ -234,6 +234,18 @@ void clearList(linkList *l)
 }
 
 /*
+check if a linkList is empty 
+*/ 
+// empty means the linkList only has one start point 
+void emptyList(linkList l)
+{
+	if(!(l->next))
+		printf("the linkList is empty!\n");
+	else
+		printf("the linkList is not empty!\n");
+}
+
+/*
 merge two linkList in order
 */
 linkList mergeLists(linkList la, linkList lb)
@@ -349,6 +361,7 @@ int main()
 	printf("number 3 is the No.%d data of this linkList\n", locate(l,3));
 	clearList(pl);
 	showList(l);
+	emptyList(l);
 	printf("the length of this linkList is %d\n", listLength(l));
 
 	// merge two linkLists
