@@ -369,12 +369,21 @@ int main()
 	linkList lb = initList();
 	la->data = 0;
 	lb->data = 0;
+	/*
+	be careful here!
+	if a node has been used in a linked list it couldn't be used in another linked list or the first linked list will be changed!
+	*/
 	tailInsList(la, pa);
 	tailInsList(la, pb);
 	tailInsList(la, pc);
 	tailInsList(lb, pb);
 	tailInsList(lb, pc);
 	tailInsList(lb, pd);
+	/*
+	actually we want two lists : 0->1->2->3, 0->2->3->4 but we got 0->1->2->3->4 and 0->2->3->4 
+	this is because the node c has been used in the first linked list and c.next has been defined to be NULL
+	but we reuse it for the second linked list and change c.next from NULL to &d
+	*/
 	linkList lab = mergeLists(la, lb);
 	printf("merge the following two linkLists:\n");
 	showList(la);
