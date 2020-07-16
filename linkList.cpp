@@ -348,7 +348,7 @@ int main()
 	// mind that no matter what kind of ways the data in start point will always 0, because l is not just a pointer but a node	
 	headInsList(pl, pb);
 	tailInsList(l, pc);
-	insList(pl,3,pd);
+	insList(pl,5,pd);
 	showList(l);
 	printf("the length of this linkList is %d\n", listLength(l));
 	printf("the 2nd number is %d\n", getElem(l,2));

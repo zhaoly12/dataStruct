@@ -142,10 +142,14 @@ void insList(rear * r, int i, Node *n)
 	{
 		printf("data in first point can not be changed!\n");
 	}
+	else if (i == 2)
+	{
+		headInsList(n, *r);
+	}
 	else
 	{
 		Node *p = (*r)->next->next;
-		int count = 2;
+		int count = 3;
 		while(p != (*r)->next)
 		{
 			if(count == i)
@@ -330,7 +334,7 @@ int main()
 	// mind that no matter what kind of ways the data in start point will always 0, because l is not just a pointer but a node	
 	headInsList(pb, r);
 	tailInsList(pc, pr);
-	insList(pr,3,pd); 
+	insList(pr,5,pd); 
 	showList(r); 
 	printf("the length of this linkList is %d\n", listLength(r));
 	printf("the 2nd number is %d\n", getElem(r,2));
