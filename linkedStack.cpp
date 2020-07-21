@@ -1,21 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-
-#define elemType int 
-
-#define M 10
-
-/*
-define a linked stack
-*/
-typedef struct node
-{
-	elemType data;
-	node * next;
-} node, *linkStack;
-// use top[M] to control M linked lists
-linkStack top[M];
+#include "linkedStack.h"
 
 /*
 initialize a stack
@@ -65,36 +51,13 @@ void emptyStack(linkStack l)
 /*
 push an element into a stack
 */
-void push(linkStack l, elemType e)
-{
-	node * newNode = (node*)malloc(sizeof(node));
-	if(!newNode)
-	{
-		printf("ERROR:you have run out of the memory of your computer!\n");
-	}
-	else
-	{
-		newNode->next = l->next;
-		newNode->data = e;
-		l->next = newNode;
-	}
-}
+void push(linkStack l, elemType e);
 
 /*
 pop an element from a stack
 */
-void pop(linkStack l, elemType* e)
-{
-	if(l->next == NULL)
-	{
-		printf("this stack is already empty!\n");
-	}
-	else
-	{
-		*e = l->next->data;
-		l->next = l->next->next;	
-	}
-}
+int pop(linkStack l, elemType* e);
+
 
 /*
 clear a stack
@@ -151,6 +114,9 @@ int main()
 	pop(l,e);
 	printf("pop an element %d out of the stack\n", *e);
 	showStack(l);
+	pop(l, e);
+	pop(l, e);
+	pop(l, e);
 	
 	// clear
 	clearStack(l);
