@@ -8,6 +8,7 @@ classes:
        circular linked list
        double list
        double linked list
+       static list
 methods:
        initialize a list
        insert an element into a list
@@ -24,6 +25,7 @@ attributions:
        node pointer
        rear pointer
        head pointer
+       cursor(used in static list)
 
 2. stack
 
