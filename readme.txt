@@ -1,7 +1,7 @@
 
 data structure
 
-1. list:
+1. list
 classes: 
        sequential list
        linked list
@@ -28,9 +28,33 @@ attributions:
        cursor(used in static list)
 
 2. stack
+classes:
+      sequential stack
+      dual stack
+      linked stack
+methods:
+      initialize a stack
+      push an element into a stack
+      pop an element from a stack
+      get an element from a stack
+      check if a stack is empty
+      check if a stack is full
+      clear a stack
+attributions:
+      element
+      top pointer
 
 3. queue
+classes:
+methods:
+attributions:
 
 4. tree
+classes:
+methods:
+attributions:
 
 5. graph
+classes:
+methods:
+attributions:
