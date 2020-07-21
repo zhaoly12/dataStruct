@@ -11,6 +11,8 @@ void example(int number, int countSys)
 	int no = number, re;
 	int* e = (int*)malloc(sizeof(int));
 	
+	if(no == 0)
+		printf("%d", 0);
 	while(no != 0) 
 	{
 		re = no%countSys;
