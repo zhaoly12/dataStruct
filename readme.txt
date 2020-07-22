@@ -46,8 +46,21 @@ attributions:
 
 3. queue
 classes:
+      sequential queue
+      circular queue
+      linked queue
 methods:
+      initialize a queue
+      check if a queue is empty
+      check if a queue is full
+      enter an element into a queue
+      delete an element from a queue
+      get an element from a queue
+      clear a queue
 attributions:
+      element
+      rear pointer
+      front pointer
 
 4. tree
 classes:
