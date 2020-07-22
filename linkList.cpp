@@ -391,6 +391,7 @@ int main()
 	puts("the result is:"); 
 	showList(lab);
 	
+	system("pause");
 
 	return 0;
 }

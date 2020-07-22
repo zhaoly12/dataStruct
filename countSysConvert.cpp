@@ -40,6 +40,8 @@ int main()
 	scanf("%d", &countSys);
 	puts("the result is:");
 	example(number, countSys);
+
+	system("pause");
 	
 	return 0;
 }

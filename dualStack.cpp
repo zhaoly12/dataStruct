@@ -217,5 +217,7 @@ int main()
 	clearStack(s); 
 	showStack(s);
 	
+	system("pause");
+	
 	return 0;
 }

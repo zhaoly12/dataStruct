@@ -324,6 +324,8 @@ int main()
 	// delete node 
 	delList(l,bkp, 5);
 	showList(l);
+	
+	system("pause");
 
 	return 0;	
 } 

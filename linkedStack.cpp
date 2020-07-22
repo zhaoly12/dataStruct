@@ -161,6 +161,8 @@ int main()
 			break;
 		}
 	}
+	
+	system("pause");
 
 	return 0;
 }

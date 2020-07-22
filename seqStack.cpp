@@ -176,5 +176,7 @@ int main()
 	printf("now stack is:\n");
 	showStack(s);
 	
+	system("pause");
+	
 	return 0;
 }

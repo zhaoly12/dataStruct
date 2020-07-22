@@ -155,6 +155,8 @@ int main()
 	enter(q, 8);
 	empty(q);
 	show(q);
+	
+	system("pause");
 
 	return 0;
 }

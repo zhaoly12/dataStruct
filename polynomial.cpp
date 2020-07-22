@@ -135,6 +135,8 @@ int main()
 	show(lb);
 	puts("equals");
 	show(l);
+	
+	system("pause");
 		
 	return 0;
 }

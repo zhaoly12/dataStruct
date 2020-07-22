@@ -372,5 +372,7 @@ int main()
 	puts("the result is:"); 
 	showList(rab);
 	
+	system("pause");
+	
 	return 0;
 }

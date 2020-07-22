@@ -246,6 +246,8 @@ int main() {
 	// clear this seqList
 	clearList(l);
 	emptyList(*l); 
+	
+	system("pause");
 	 
 	return 0;
 }

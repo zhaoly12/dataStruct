@@ -212,6 +212,6 @@ int main()
 	int len;
 	scanf("%d", &len);
 	yangHuiTriangle(len);
-	
+	system("pause");	
 	return 0;
 }

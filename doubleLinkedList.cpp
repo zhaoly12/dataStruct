@@ -267,5 +267,7 @@ int main()
 	delList(pr, 4);
 	showList(r);
 		
+	system("pause");
+		
 	return 0;
 }
