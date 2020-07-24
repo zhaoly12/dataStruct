@@ -9,6 +9,8 @@ classes:
        double list
        double linked list
        static list
+       orthogonal linked list
+       generalized list
 methods:
        initialize a list
        insert an element into a list
@@ -20,12 +22,17 @@ methods:
        show a list
        check if a list is empty
        merge two lists
+       calculate the depth of a list (generalized list)
+       calculate the number of atoms in a list (generalized list)
 attributions:
        node (node.element, node.prior, node.next)
        node pointer
        rear pointer
        head pointer
-       cursor(used in static list)
+       cursor (used in static list)
+       right pointer (used in orthogonal linked list)
+       down pointer (used in orthogonal linked list)
+       generalized list node (generalized node is different from others)
 
 2. stack
 classes:
@@ -62,12 +69,14 @@ attributions:
       rear pointer
       front pointer
 
-4. tree
+4. array
+
+5. tree
 classes:
 methods:
 attributions:
 
-5. graph
+6. graph
 classes:
 methods:
 attributions:
