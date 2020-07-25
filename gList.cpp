@@ -142,25 +142,74 @@ int main()
 	puts("\nchanged to (1)!\n");
 	// get length
 	printf("the length of this generalized list is %d\n", length(gl));
-	
 	// get depth
 	printf("the depth of this generalized list is %d\n", depth(gl));
-	
 	// count atoms
 	printf("there are %d atoms in this generalized list\n", atomNum(gl));	
 	
 	gl->atom_htp.htp.tp = (gList)malloc(sizeof(GLNode));
-	gl->atom_htp.htp.tp->flag = LIST;
-	gl->atom_htp.htp.tp->atom_htp.htp.hp = (gList)malloc(sizeof(GLNode));
-	gl->atom_htp.htp.tp->atom_htp.htp.tp = NULL;
-	gl->atom_htp.htp.tp->atom_htp.htp.hp->flag = LIST;
-	gl->atom_htp.htp.tp->atom_htp.htp.hp->atom_htp.htp.hp = (gList)malloc(sizeof(GLNode));
-	gl->atom_htp.htp.tp->atom_htp.htp.hp->atom_htp.htp.hp->flag = ATOM;
-	gl->atom_htp.htp.tp->atom_htp.htp.hp->atom_htp.htp.hp->atom_htp.atom = 2;
-	gl->atom_htp.htp.tp->atom_htp.htp.hp->atom_htp.htp.tp = NULL;
-	
+	GLNode* gln2 = gl->atom_htp.htp.tp;
+	gln2->flag = LIST;
+	gln2->atom_htp.htp.hp = (gList)malloc(sizeof(GLNode));
+	gln2->atom_htp.htp.tp = NULL;
+	gln2->atom_htp.htp.hp->flag = LIST;
+	gln2->atom_htp.htp.hp->atom_htp.htp.hp = (gList)malloc(sizeof(GLNode));
+	gln2->atom_htp.htp.hp->atom_htp.htp.hp->flag = ATOM;
+	gln2->atom_htp.htp.hp->atom_htp.htp.hp->atom_htp.atom = 2;
+	gln2->atom_htp.htp.hp->atom_htp.htp.tp = NULL;
 	// (1,(2))
 	puts("\nchanged to (1,(2))!\n");
+	// get length
+	printf("the length of this generalized list is %d\n", length(gl));
+	// get depth
+	printf("the depth of this generalized list is %d\n", depth(gl));
+	// count atoms
+	printf("there are %d atoms in this generalized list\n", atomNum(gl));
+	
+	gln2->atom_htp.htp.hp->atom_htp.htp.tp = (gList)malloc(sizeof(GLNode));
+	GLNode* gln3 = gln2->atom_htp.htp.hp->atom_htp.htp.tp;
+	gln3->flag = LIST;
+	gln3->atom_htp.htp.hp = (gList)malloc(sizeof(GLNode));
+	gln3->atom_htp.htp.tp = NULL;
+	gln3->atom_htp.htp.hp->flag = ATOM;
+	gln3->atom_htp.htp.hp->atom_htp.atom = 3;
+	// (1,(2,3))
+	puts("\nchanged to (1,(2,3))!\n");
+	// get length
+	printf("the length of this generalized list is %d\n", length(gl));
+	// get depth
+	printf("the depth of this generalized list is %d\n", depth(gl));
+	// count atoms
+	printf("there are %d atoms in this generalized list\n", atomNum(gl));
+	
+	gln3->atom_htp.htp.tp = (gList)malloc(sizeof(GLNode));
+	GLNode* gln4 = gln3->atom_htp.htp.tp;
+	gln4->flag = LIST;
+	gln4->atom_htp.htp.hp = (gList)malloc(sizeof(GLNode));
+	gln4->atom_htp.htp.tp = NULL;
+	gln4->atom_htp.htp.hp->flag = LIST;
+	gln4->atom_htp.htp.hp->atom_htp.htp.hp = (gList)malloc(sizeof(GLNode));
+	gln4->atom_htp.htp.hp->atom_htp.htp.tp = NULL;
+	gln4->atom_htp.htp.hp->atom_htp.htp.hp->flag = ATOM;
+	gln4->atom_htp.htp.hp->atom_htp.htp.hp->atom_htp.atom = 4;
+	// (1,(2,3,(4)))
+	puts("\nchanged to (1,(2,3,(4)))!\n");
+	// get length
+	printf("the length of this generalized list is %d\n", length(gl));
+	// get depth
+	printf("the depth of this generalized list is %d\n", depth(gl));
+	// count atoms
+	printf("there are %d atoms in this generalized list\n", atomNum(gl));
+	
+	gln2->atom_htp.htp.tp = (gList)malloc(sizeof(GLNode));
+	GLNode* gln5 = gln2->atom_htp.htp.tp;
+	gln5->flag = LIST;
+	gln5->atom_htp.htp.tp = NULL;
+	gln5->atom_htp.htp.hp = (gList)malloc(sizeof(GLNode));
+	gln5->atom_htp.htp.hp->flag = ATOM;
+	gln5->atom_htp.htp.hp->atom_htp.atom = 5;
+	// (1,(2,3,(4)),5) 
+	puts("\nchanged to (1,(2,3,(4)),5)!\n");
 	// get length
 	printf("the length of this generalized list is %d\n", length(gl));
 	// get depth
