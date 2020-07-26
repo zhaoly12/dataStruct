@@ -73,8 +73,24 @@ attributions:
 
 5. tree
 classes:
+      binary tree (special cases: full binary tree, complete binary tree)
 methods:
+      initialize a tree
+      check if a tree is empty
+      return the root node of a tree
+      return the parent node of a node in a tree
+      return the child nodes of a node in a tree
+      traverse a tree
+      create a tree
+      clear a tree
+      show a tree
+      calculate the number of the leaf nodes of a tree
+      calculate the depth of a tree
 attributions:
+      width
+      depth
+      nodes (root node, leaf nodes, parent node, sibling nodes, child nodes, left child node(binary tree), right child tree(binary tree))
+      node pointers (parent node pointer, left child pointer(binary tree), right child pointer(binary tree))
 
 6. graph
 classes:
