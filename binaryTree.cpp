@@ -570,13 +570,14 @@ int main()
 	puts("don't forget that the leaf nodes also have 'childs', which are '.'");
 	puts("\nnow please input the nodes in sequence:"); 
 	create(t, NULL);
+	fflush(stdin);
 	empty((*t));
 	printf("the root node of this tree is %c\n", root((*t)));
 	int bias = 3;
 	puts("the tree you have typed in is:");
 	show((*t), bias);
 	leafNodes(*t);
-	printf("\n this tree has %d le, af nodes\n", leafNum); 
+	printf("\n this tree has %d leaf nodes\n", leafNum); 
 	printf("\n this tree has %d leaf nodes and its depth is %d\n", leafNodes2(*t), depth(*t)); 
 	
 	// traverse a binary tree
