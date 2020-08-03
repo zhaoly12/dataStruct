@@ -34,7 +34,7 @@ attributions:
        down pointer (used in orthogonal linked list)
        generalized list node (generalized node is different from others)
 
-2. stack
+2. stack(a special linear list)
 classes:
       sequential stack
       dual stack
@@ -51,7 +51,7 @@ attributions:
       element
       top pointer
 
-3. queue
+3. queue(a special linear list)
 classes:
       sequential queue
       circular queue
@@ -74,23 +74,28 @@ attributions:
 5. tree
 classes:
       binary tree (special cases: full binary tree, complete binary tree)
+      tree(a tree can be changed into a binary tree)
+      forest(a forest can be changed into a binary tree)
 methods:
-      initialize a tree
-      check if a tree is empty
-      return the root node of a tree
-      return the parent node of a node in a tree
-      return the child nodes of a node in a tree
-      traverse a tree
-      create a tree
-      clear a tree
-      show a tree
-      calculate the number of the leaf nodes of a tree
-      calculate the depth of a tree
+      initialize a tree/forest
+      check if a tree /forest is empty
+      return the root node of a tree(the root of the first tree in a forest)
+      return the parent node of a node
+      return the child nodes of a node
+      return the next sibling of a node
+      traverse a tree/forest
+      create a tree/forest
+      clear a tree/forest
+      show a tree/forest
+      calculate the number of the leaf nodes of a tree/forest
+      calculate the depth of a tree(the deepest tree in a forest)
+      add a child tree into a tree
+      delete a child tree of a tree
 attributions:
       width
       depth
-      nodes (root node, leaf nodes, parent node, sibling nodes, child nodes, left child node(binary tree), right child tree(binary tree))
-      node pointers (parent node pointer, left child pointer(binary tree), right child pointer(binary tree))
+      nodes (root node, leaf nodes, parent node, sibling nodes, child nodes, first/left child tree, right child tree(binary tree))
+      node pointers (parent pointer, first/left child pointer, next sibling pointer(tree and forest), right child pointer(binary tree))
 
 6. graph
 classes:
