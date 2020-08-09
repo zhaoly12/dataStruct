@@ -99,5 +99,34 @@ attributions:
 
 6. graph
 classes:
+      undirected graph
+      undirected network
+      directed graph
+      directed network
 methods:
+      initialize a graph/network
+      create a graph/network
+      destroy a graph/network
+      find the first adjacent vertex 
+      find the next adjacent vertex
+      insert a vertex into a graph/network
+      insert an arch/edge into a graph/network
+      delete an arch/edge from a graph/network
+      delete a vertex from a graph/network
+      traverse a graph/network(depth first search, breadth first search)
+      find a path between two vertexes(depth first search, breadth first search)
+      find the minimum spanning tree of a graph/network(Prim algorithm, Kruskal algorithm)
+      find a toposort of a directed acyclic graph/network
+      find the critical path of a directed acyclic network
+      find the sortest path between two vertexes in graph/network(Dijkstra algorithm, Floyd algorithm)
 attributions:
+      edge(undirected graph/network)
+      arch : tail -> head(directed graph/network)
+      vertex(adjacent vertex, source vertex, counter vertex)
+      in degree(directed graph/network)
+      out degree(directed graph/network) 
+      weight of an arch(network)
+      path, directed path, simple path
+      connected subgraph
+      strongly connected subgraph
+      minimum spanning tree
